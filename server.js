@@ -45,7 +45,6 @@ app.get('/', (req, res) => {
     });
 });
 
-
 app.get('/about', (req, res) => {
     res.render('about.hbs',{
         pageTitle: 'About Page',
@@ -56,6 +55,13 @@ app.get('/about', (req, res) => {
 app.get('/bad', (req, res) => {
     res.send({
         errorMessage: 'Bad request.'
+    });
+});
+
+app.get('/projects', (req, res) => {
+    res.render('about.hbs',{
+        pageTitle: 'Projects',
+        welcomeMessage: 'Welcome to my page',
     });
 });
 
